@@ -23,11 +23,11 @@ df = pd.DataFrame(db.data, columns=db.feature_names)
 col1, col2 = st.columns([2,1])
 with col1:
     # Display dataframe as an interactive table
-    st.dataframe(df, use_container_width=True)
+    st.dataframe(df)
 with col2:
     # Plot histogram for age of patients
     fig, ax = plt.subplots(figsize=(6, 3))
-    if 1==0: # Evaluate True to show plot
+    if 1==1: # Evaluate True to show plot
         df['age'].hist(bins = 10, ax=ax)
         fig.suptitle("Age Distribution")
         st.pyplot(fig)
